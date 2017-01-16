@@ -36,13 +36,13 @@ npm start
 # Project Structure
 ```
 + css/
-+ release/				Packaged applications by platform
-+ resources/			  Project assets (images/icons, etc.)
-- src/					Source directory
- |+ components/		   React components
-App.js					Renders the app's react components
-index.html				The entry point of the app
-index.js				  Electron configuration
++ release/				   Packaged applications by platform
++ resources/			   Project assets (images/icons, etc.)
+- src/				       Source directory
+ |+ components/		       React components
+App.js				       Renders the app's react components
+index.html				   The entry point of the app
+index.js			       Electron configuration
 package.json
 ```
 
