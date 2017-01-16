@@ -1,0 +1,28 @@
+{
+  "name": "electron-compile-react",
+  "version": "1.0.0",
+  "description": "A sample app using Electron, electron-prebuilt-compile, React, and Bootstrap.",
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "electron-prebuilt-compile": "^1.4.14",
+    "babel": "^6.5.2",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.3",
+    "babel-preset-react": "*",
+    "electron-connect": "*",
+    "electron-devtools-installer": "^2.0.1",
+    "electron-packager": "*",
+    "electron-react-devtools": "^0.3.1"
+  }
+}
