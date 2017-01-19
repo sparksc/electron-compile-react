@@ -11,8 +11,9 @@ This boilerplate uses the following technology:
 - [electron-prebuilt-compile](https://github.com/electron-userland/electron-prebuilt-compile): powered by [electron-compile](https://github.com/electron/electron-compile) to compile JS and CSS
 - [React](https://facebook.github.io/react/): the UI
 - [Babel](http://babeljs.io/): a JavaScript compiler
-- [Bootstrap 3](http://getbootstrap.com/): a responsive CSS framework
+- [Semantic-UI-React](http://react.semantic-ui.com/introduction): a responsive UI framework with React components
 - [react-devtools](https://github.com/facebook/react-devtools): an extension of Chrome's developer tools for React components. Installed using [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer)
+- [cross-env](https://www.npmjs.com/package/cross-env): set environment scripts for running the app
 
 
 ![App screenshot](resources/electron-compile-react_screenshot.png)
@@ -47,6 +48,12 @@ package.json
 ```
 
 
+Note that the current configuration for Semantic-UI-React is installed via npm and includes the Semantic UI CDN link in the *index.js* file. To allow for custom theming with Semantic UI, the Semantic UI package would need to be installed and built with Gulp. Refer [here](https://github.com/Semantic-Org/Semantic-UI#install) for instructions on how to install the Semantic UI package.
+
+
+---
+
+
 # Editor Configuration
 #### Atom
 ```bash
@@ -54,11 +61,12 @@ apm install linter linter-js-standard-jsx react autocomplete-modules javascript-
 ```
 
 # Other UI Options
-The current template uses Bootstrap, but here are a few other front-end frameworks that can be used instead:
-- [Semantic UI](http://semantic-ui.com/)
-- [Foundation](http://foundation.zurb.com/)
-- [Materialize](http://materializecss.com/)
+The current template uses Semantic-UI-React, but here are a few other front-end frameworks that can be used instead:
+- [Semantic UI](http://semantic-ui.com/) or [Semantic-UI-React](http://react.semantic-ui.com/introduction)
 - [Material-UI](http://www.material-ui.com/#/)
+- [Materialize](http://materializecss.com/)
+- [Bootstrap 3](http://getbootstrap.com/)
+- [Foundation](http://foundation.zurb.com/)
 - [React Desktop](https://github.com/gabrielbull/react-desktop)
 - [Photon](http://photonkit.com/)
-- And more...
+- [And more...](https://en.wikipedia.org/wiki/CSS_frameworks#List_of_CSS_frameworks "Wikipedia")

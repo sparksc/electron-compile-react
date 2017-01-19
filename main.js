@@ -2,6 +2,12 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
 
+// Allow hot reload of the Electron app
+// https://www.npmjs.com/package/electron-reload
+// require('electron-reload')(__dirname, {
+//   electron: require('electron-prebuilt-compile')
+// })
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
@@ -16,15 +22,23 @@ function createWindow () {
     title: 'electron-compile-react'
   })
 
-  // and load the index.html of the app.
-  win.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  // load the index.html of the app based on script ENV Variables.
+  if (process.env.NODE_ENV === 'development') {
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
 
-  // Open the DevTools.
-  win.webContents.openDevTools()
+    // Open the DevTools only in Development mode.
+    win.webContents.openDevTools()
+  } else {
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
+  }
 
   // Emitted when the window is closed.
   win.on('closed', () => {

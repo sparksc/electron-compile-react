@@ -1,16 +1,29 @@
-// This component contains the body/main contents of the app. An example of Bootstrap Jumbotron.
+// This component contains the body/main contents of the app. This is an example of using the Grid component.
 import React from 'react'
+import { Button, Container, Grid, Image } from 'semantic-ui-react'
+import LeftContent from './LeftContent'
 
 export default class Body extends React.Component {
   render () {
     return (
-      <div>
-        <div className="jumbotron">
-          <h1>Hello, world!</h1>
-          <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-        </div>
-      </div>
+      <Grid divided='vertically'>
+        <Grid.Row columns={2}>
+          <Grid.Column>
+            <LeftContent />
+          </Grid.Column>
+          <Grid.Column>
+            <Container>
+              <Image src='./resources/blank_image.png' />
+            </Container>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row columns={1}>
+          <Grid.Column>
+            <Button fluid color='blue'>Lorem ipsum</Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     )
   }
 }
